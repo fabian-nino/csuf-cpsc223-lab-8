@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="116" width="374" height="30"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="fIX-Fd-8Ov" kind="show" id="DwM-pH-SrM"/>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgO-mo-HST"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xh9-R0-qh0">
@@ -42,10 +42,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W8-pm-2uf">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
                                                 <state key="normal" title="Forgot Username"/>
+                                                <connections>
+                                                    <action selector="forgotUsernameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaX-Vu-DLB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxs-iO-tNK">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="30"/>
                                                 <state key="normal" title="Forgot Password"/>
+                                                <connections>
+                                                    <action selector="fogotPasswordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Cd-mG-o7s"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -65,7 +71,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Rp-dY-kIS"/>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="kxs-iO-tNK" id="XMy-zQ-c88"/>
+                        <outlet property="forgotUsernameButton" destination="6W8-pm-2uf" id="J6h-Id-Iwl"/>
+                        <outlet property="loginButton" destination="Bq0-FV-3VB" id="qGt-17-Rdt"/>
                         <outlet property="username" destination="KhY-CP-Lp5" id="uCL-wt-J1i"/>
+                        <segue destination="fIX-Fd-8Ov" kind="show" identifier="loginSegue" id="YYT-Je-xqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
